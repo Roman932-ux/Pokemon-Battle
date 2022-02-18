@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'pmd'
 }
 
 repositories {
@@ -7,4 +7,12 @@ repositories {
 }
 
 dependencies {
+}
+pmd {
+     consoleOutput = true
+    
+    rulesMinimumPriority = 5
+    ruleSets = ["category/java/errorprone.xml", "category/java/bestpractices.xml"]
+    toolVersion = "6.39.0"
+   
 }
